@@ -56,6 +56,8 @@ begin
 
   Position:=poScreenCenter;
   Caption :='Test Penjumlahan Berurutan - By Teguh Prasetyo';
+  kosongkanGrid;
+  pg1.ActivePage:=tAngkaAcak;
 
 end;
 
@@ -70,7 +72,7 @@ begin
       FixedCols:=1;
       FixedRows:=0;
 
-      ColWidths[0]:=60;
+      ColWidths[0]:=30;
       ColWidths[1]:=70;
       ColWidths[2]:=70;
 

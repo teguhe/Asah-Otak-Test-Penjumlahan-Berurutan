@@ -56,6 +56,8 @@ begin
 
   Position:=poScreenCenter;
   Caption :='Test Penjumlahan Berurutan - By Teguh Prasetyo';
+  kosongkanGrid;
+  pg1.ActivePage:=tAngkaAcak;
 
 end;
 
