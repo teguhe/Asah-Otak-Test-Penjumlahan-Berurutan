@@ -1,0 +1,173 @@
+object Form1: TForm1
+  Left = 256
+  Height = 658
+  Top = 145
+  Width = 390
+  BorderStyle = bsDialog
+  Caption = 'Form1'
+  ClientHeight = 658
+  ClientWidth = 390
+  OnCreate = FormCreate
+  LCLVersion = '3.6.0.0'
+  object cbJumlahData: TComboBox
+    Left = 104
+    Height = 23
+    Top = 154
+    Width = 100
+    ItemHeight = 15
+    ItemIndex = 0
+    Items.Strings = (
+      '3'
+      '5'
+      '7'
+      '10'
+      '15'
+      '20'
+      '30'
+      '40'
+      '50'
+    )
+    ReadOnly = True
+    TabOrder = 0
+    Text = '3'
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 157
+    Width = 65
+    Caption = 'Jumlah Data'
+  end
+  object cbMode: TComboBox
+    Left = 104
+    Height = 23
+    Top = 182
+    Width = 100
+    ItemHeight = 15
+    ItemIndex = 1
+    Items.Strings = (
+      'Super Easy'
+      'Easy'
+      'Medium'
+      'Hard'
+      'Extra Hard'
+    )
+    ReadOnly = True
+    TabOrder = 1
+    Text = 'Easy'
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 185
+    Width = 31
+    Caption = 'Mode'
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 15
+    Top = 25
+    Width = 47
+    Caption = 'Petunjuk'
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 90
+    Top = 48
+    Width = 337
+    Caption = 'Pilih jumlah data dan modenya, kemudian klik start, '#13#10'aplikasi akan menampilkan angka secara acak '#13#10'dan tugasmu adalah menambahkan semua angka yang muncul'#13#10'sampai semua angka ditampilkan bergantian'#13#10'kemudian cek hasilnya apakah sama antara perhitunganmu'#13#10'dengan perhitungan komputer'
+  end
+  object Label5: TLabel
+    Left = 105
+    Height = 30
+    Top = 213
+    Width = 247
+    Caption = 'Mode Easy 2 digit, Medium 3 digit, hard 4 Digit'#13#10'Angka berikutnya muncul setelah 3 detik'
+  end
+  object btGo: TButton
+    Left = 105
+    Height = 25
+    Top = 264
+    Width = 75
+    Caption = 'Go !'
+    TabOrder = 2
+    OnClick = btGoClick
+  end
+  object pg1: TPageControl
+    Left = 16
+    Height = 312
+    Top = 296
+    Width = 360
+    ActivePage = tHasil
+    TabIndex = 2
+    TabOrder = 3
+    object tAngkaAcak: TTabSheet
+      Caption = 'Angka Acak'
+      ClientHeight = 284
+      ClientWidth = 352
+      object lbAngka: TLabel
+        Left = 0
+        Height = 284
+        Top = 0
+        Width = 352
+        Align = alClient
+        Alignment = taCenter
+        Caption = '0'
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -96
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+    end
+    object tRiwayat: TTabSheet
+      Caption = 'Riwayat Angka'
+      ClientHeight = 284
+      ClientWidth = 352
+      object sgRiwayat: TStringGrid
+        Left = 0
+        Height = 284
+        Top = 0
+        Width = 352
+        Align = alClient
+        TabOrder = 0
+      end
+    end
+    object tHasil: TTabSheet
+      Caption = 'Hasil'
+      ClientHeight = 284
+      ClientWidth = 352
+      object lbHasil: TLabel
+        Left = 0
+        Height = 284
+        Top = 0
+        Width = 352
+        Align = alClient
+        Alignment = taCenter
+        Caption = '0'
+        Color = clNavy
+        Font.CharSet = ANSI_CHARSET
+        Font.Height = -96
+        Font.Pitch = fpVariable
+        Font.Quality = fqDraft
+        Font.Style = [fsBold]
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object lbIterasi: TLabel
+    Left = 22
+    Height = 15
+    Top = 615
+    Width = 61
+    Caption = 'Iterasi ke : 0'
+  end
+  object tm1: TTimer
+    Interval = 3000
+    OnTimer = tm1Timer
+    Left = 280
+    Top = 152
+  end
+end
